@@ -310,11 +310,11 @@
 }
 
 .hero-name {
-  font-size: clamp(2.8rem, 8vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.02em;
-  margin-bottom: 0.5rem;
+  font-size: clamp(2.5rem, 6.5vw, 4.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.75rem;
   opacity: 0;
   animation: slideUp 0.6s ease forwards 0.5s;
 }
@@ -908,6 +908,70 @@
   border-color: var(--border-glow) !important;
   background: var(--bg-card-hover) !important;
   box-shadow: 0 20px 40px rgba(99, 102, 241, 0.08);
+}
+
+/* ── Education Timeline ── */
+.experience-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--cyan), var(--purple), transparent);
+  border-radius: 99px;
+}
+
+.exp-item {
+  display: flex;
+  gap: 2rem;
+  padding-bottom: 3.5rem;
+  position: relative;
+}
+
+.exp-dot {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 2px solid var(--border-glow);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+.exp-content {
+  flex: 1;
+  padding: 2.5rem;
+  border-radius: 16px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  transition: var(--transition);
+}
+
+.exp-content:hover {
+  border-color: var(--border-glow);
+  background: var(--bg-card-hover);
+  transform: translateX(8px);
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 /* ── Education ── */

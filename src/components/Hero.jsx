@@ -63,9 +63,8 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-name">
-            <span className="gradient-text">Sinthujah</span>
-            <br />
-            <span style={{ color: 'var(--text-primary)', fontWeight: 900 }}>Kanagasundaram</span>
+            <span className="gradient-text">Sinthujah</span><br />
+            <span>Kanagasundaram</span>
           </h1>
 
           <TypewriterText />

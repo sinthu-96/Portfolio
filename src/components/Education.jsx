@@ -34,23 +34,23 @@ export default function Education() {
           </div>
         </ScrollReveal>
 
-        <div className="experience-timeline" style={{ maxWidth: '900px', margin: '0 auto' }}>
+        <div className="experience-timeline">
           {EDUCATION.map((edu, i) => (
-            <ScrollReveal key={i} delay={i * 100}>
+            <ScrollReveal key={i} delay={i * 100} direction="left">
               <div className="exp-item">
-                <div className="exp-dot" style={{ border: '2px solid var(--border-glow)', background: 'var(--bg-card)' }}>
+                <div className="exp-dot">
                   {edu.icon}
                 </div>
-                <div className="exp-content" style={{ padding: '2rem' }}>
-                  <div className="exp-header" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.25rem' }}>
-                    <div className="exp-period" style={{ color: 'var(--purple)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                <div className="exp-content">
+                  <div className="exp-header" style={{ flexDirection: 'column', alignItems: 'flex-start' }}>
+                    <div style={{ color: 'var(--cyan)', fontFamily: 'var(--font-mono)', fontSize: '0.85rem', marginBottom: '0.5rem' }}>
                       {edu.period}
                     </div>
-                    <div className="exp-role" style={{ fontSize: '1.25rem', fontWeight: 800 }}>
+                    <h3 style={{ fontSize: '1.2rem', fontWeight: 700, margin: 0 }}>
                       {edu.degree}
-                    </div>
+                    </h3>
                   </div>
-                  <div className="exp-org" style={{ fontSize: '0.95rem', opacity: 0.8, marginTop: '0.4rem' }}>
+                  <div style={{ color: 'var(--text-secondary)', fontSize: '0.95rem', marginTop: '0.5rem' }}>
                     {edu.institution}
                   </div>
                 </div>
