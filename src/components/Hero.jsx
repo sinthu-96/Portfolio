@@ -6,7 +6,7 @@ const TITLES = [
   'Full-Stack Developer',
   'Computer Science Undergraduate',
   'Problem Solver',
-  'ML Enthusiast',
+  'Tech Enthusiast',
 ]
 
 function TypewriterText() {
@@ -82,6 +82,17 @@ export default function Hero() {
                 <span>→</span>
               </button>
             </Link>
+            
+            <a 
+              href="/Sinthujah_Kanagasundaram_CV.pdf" 
+              download="Sinthujah_Kanagasundaram_CV.pdf"
+              className="btn btn-secondary"
+              id="hero-cv-btn"
+            >
+              <span>Download CV</span>
+              <span>↓</span>
+            </a>
+
             <Link to="contact" smooth duration={700} offset={-80}>
               <button className="btn btn-outline" id="hero-contact-btn">
                 <span>Contact Me</span>

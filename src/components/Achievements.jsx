@@ -27,15 +27,6 @@ const ACHIEVEMENTS = [
   },
 ]
 
-const ACTIVITIES = [
-  { icon: '📡', role: 'Member — IEEE', org: 'IEEE Student Branch, IIT', period: '2024 – Present' },
-  { icon: '📢', role: 'Public Relations Editor', org: 'Leo District 306 D3', period: '2025 – Present' },
-  { icon: '💰', role: 'Assistant Treasurer', org: 'Leo Club of Colombo Waters Meet', period: '2025 – Present' },
-  { icon: '🏅', role: 'House Vice Captain', org: 'Hindu Ladies College', period: '2022 – 2023' },
-  { icon: '🔤', role: 'Secretary — Scrabble Union', org: 'Hindu Ladies College', period: '2022 – 2023' },
-  { icon: '🦁', role: 'Secretary — Leo Club', org: 'Hindu Ladies College', period: '2022 – 2023' },
-]
-
 export default function Achievements() {
   return (
     <section id="achievements" className="section" style={{ background: 'rgba(0,0,0,0.15)' }}>
@@ -49,7 +40,6 @@ export default function Achievements() {
           </div>
         </ScrollReveal>
 
-        {/* Certifications / Competitions */}
         <ScrollReveal delay={100}>
           <h3 style={{
             fontSize: '1.1rem',
@@ -74,34 +64,6 @@ export default function Achievements() {
                   <p>{a.desc}</p>
                   <span className="achieve-year">{a.year}</span>
                 </div>
-              </div>
-            </ScrollReveal>
-          ))}
-        </div>
-
-        {/* Extracurricular Activities */}
-        <ScrollReveal delay={200}>
-          <h3 style={{
-            fontSize: '1.1rem',
-            fontWeight: 700,
-            color: 'var(--text-secondary)',
-            margin: '3rem 0 1.25rem',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-          }}>
-            <span style={{ color: 'var(--purple)' }}>///</span> Extracurricular Activities
-          </h3>
-        </ScrollReveal>
-
-        <div className="activities-grid">
-          {ACTIVITIES.map((act, i) => (
-            <ScrollReveal key={i} delay={i * 80}>
-              <div className="activity-item">
-                <div className="activity-icon">{act.icon}</div>
-                <div className="activity-role">{act.role}</div>
-                <div className="activity-org">{act.org}</div>
-                <div className="activity-period">{act.period}</div>
               </div>
             </ScrollReveal>
           ))}

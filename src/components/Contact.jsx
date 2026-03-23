@@ -5,14 +5,14 @@ const CONTACT_LINKS = [
   {
     icon: '✉️',
     label: 'Email',
-    value: 'sinthuk458@gmail.com',
-    href: 'mailto:sinthuk458@gmail.com',
+    value: 'sinthuk456@gmail.com',
+    href: 'mailto:sinthuk456@gmail.com',
   },
   {
-    icon: '💼',
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/sinthujah-kanagasundaram',
-    href: 'https://www.linkedin.com/in/sinthujah-kanagasundaram',
+    icon: '📞',
+    label: 'Phone',
+    value: '+94 770702673',
+    href: 'tel:+94770702673',
   },
   {
     icon: '⟨/⟩',
@@ -21,10 +21,10 @@ const CONTACT_LINKS = [
     href: 'https://github.com/sinthu-96',
   },
   {
-    icon: '📞',
-    label: 'Phone',
-    value: '+94 770702673',
-    href: 'tel:+94770702673',
+    icon: '💼',
+    label: 'LinkedIn',
+    value: 'linkedin.com/in/sinthujah-kanagasundaram',
+    href: 'https://www.linkedin.com/in/sinthujah-kanagasundaram',
   },
 ]
 
@@ -51,19 +51,20 @@ export default function Contact() {
       <div className="container">
         <ScrollReveal>
           <div className="section-header">
-            <span className="section-label">Get In Touch</span>
+            <span className="section-label">Let's Connect</span>
             <h2 className="section-title">
-              Let's <span className="gradient-text">Connect</span>
+              Get in <span className="italic-text">Touch</span>
             </h2>
             <p style={{
               color: 'var(--text-secondary)',
-              marginTop: '0.75rem',
-              maxWidth: '450px',
-              margin: '0.75rem auto 0',
-              fontSize: '0.95rem',
+              marginTop: '1.25rem',
+              maxWidth: '650px',
+              margin: '1.25rem auto 0',
+              fontSize: '1rem',
+              lineHeight: '1.8'
             }}>
-              Open to internship opportunities, collaborations, and interesting conversations.
-              Let's build something great together.
+              I'm open to internships, collaborations, creative opportunities, and meaningful 
+              tech projects. Let's build something impactful together.
             </p>
           </div>
         </ScrollReveal>
@@ -72,13 +73,9 @@ export default function Contact() {
           {/* Contact Info */}
           <ScrollReveal direction="left">
             <div className="contact-info">
-              <h3>
-                Ready to <span className="gradient-text">collaborate?</span>
+              <h3 style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
+                Contact Details
               </h3>
-              <p>
-                I'm actively seeking internship opportunities and exciting projects to contribute to.
-                Whether you have a role, a project idea, or just want to connect — my inbox is always open.
-              </p>
               <div className="contact-links">
                 {CONTACT_LINKS.map((link, i) => (
                   <a
@@ -88,12 +85,9 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="contact-link-item"
                     id={`contact-link-${i}`}
+                    style={{ padding: '0.85rem 1.25rem' }}
                   >
-                    <div className="contact-link-icon">{link.icon}</div>
-                    <div>
-                      <div className="contact-link-label">{link.label}</div>
-                      <div className="contact-link-value">{link.value}</div>
-                    </div>
+                    <div className="contact-link-value" style={{ fontSize: '0.95rem' }}>{link.value}</div>
                   </a>
                 ))}
               </div>
@@ -110,7 +104,7 @@ export default function Contact() {
                   name="name"
                   type="text"
                   className="form-input"
-                  placeholder="Your full name"
+                  placeholder="Your name"
                   value={form.name}
                   onChange={handleChange}
                   required
@@ -124,7 +118,7 @@ export default function Contact() {
                   name="email"
                   type="email"
                   className="form-input"
-                  placeholder="your@email.com"
+                  placeholder="Your email"
                   value={form.email}
                   onChange={handleChange}
                   required
@@ -138,7 +132,7 @@ export default function Contact() {
                   name="subject"
                   type="text"
                   className="form-input"
-                  placeholder="Internship / Collaboration / Project"
+                  placeholder="Subject"
                   value={form.subject}
                   onChange={handleChange}
                   required
@@ -151,25 +145,38 @@ export default function Contact() {
                   id="message"
                   name="message"
                   className="form-textarea"
-                  placeholder="Tell me about the opportunity or what you'd like to discuss..."
+                  placeholder="Your message"
                   value={form.message}
                   onChange={handleChange}
                   required
                 />
               </div>
 
-              <button
-                type="submit"
-                className="btn btn-primary form-submit"
-                id="contact-submit-btn"
-                disabled={loading}
-              >
-                {loading ? 'Sending...' : 'Send Message →'}
-              </button>
+              <div style={{ display: 'flex', gap: '1rem', marginTop: '1.5rem', flexWrap: 'wrap' }}>
+                <button
+                  type="submit"
+                  className="btn btn-primary"
+                  style={{ flex: 1, minWidth: '160px' }}
+                  id="contact-submit-btn"
+                  disabled={loading}
+                >
+                  {loading ? 'Sending...' : 'Send Message'}
+                </button>
+
+                <a 
+                  href="/Sinthujah_Kanagasundaram_CV.pdf" 
+                  download="Sinthujah_Kanagasundaram_CV.pdf"
+                  className="btn btn-secondary"
+                  style={{ flex: 1, minWidth: '160px', opacity: 0.8 }}
+                  id="contact-cv-btn"
+                >
+                  Download CV
+                </a>
+              </div>
 
               {submitted && (
-                <div className="success-message">
-                  ✅ Thank you! I'll get back to you within 24 hours.
+                <div className="success-message" style={{ marginTop: '1.5rem' }}>
+                  ✅ Message sent! I'll get back to you soon.
                 </div>
               )}
             </form>

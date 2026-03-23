@@ -54,8 +54,8 @@ const SKILL_CATEGORIES = [
 
 const ALL_SKILLS = [
   'Python', 'JavaScript', 'ReactJS', 'Node.js', 'Java', 'PHP', 'HTML', 'CSS',
-  'MySQL', 'Firebase', 'FastAPI', 'REST APIs', 'Flutter', 'TensorFlow', 'LightGBM',
-  'CNN', 'ESP32', 'GitHub', 'VS Code', 'Figma', 'Photoshop', 'Postman', 'Sequelize',
+  'MySQL', 'Firebase', 'FastAPI', 'REST APIs', 'Flutter', 'Express',
+  'ESP32', 'GitHub', 'VS Code', 'Figma', 'Photoshop', 'Postman', 'Sequelize',
 ]
 
 export default function Skills() {

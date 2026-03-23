@@ -52,6 +52,15 @@ export default function Navbar({ darkMode, setDarkMode }) {
           </div>
 
           <div className="nav-actions">
+            <a 
+              href="/Sinthujah_Kanagasundaram_CV.pdf" 
+              className="cv-btn" 
+              download="Sinthujah_Kanagasundaram_CV.pdf"
+              title="Download CV"
+            >
+              CV <span>↓</span>
+            </a>
+
             <button
               className="theme-toggle"
               onClick={() => setDarkMode(!darkMode)}

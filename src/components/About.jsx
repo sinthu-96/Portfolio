@@ -53,7 +53,7 @@ export default function About() {
               {/* Ring 2 - Middle */}
               <div className="orbit-ring orbit-ring-2">
                 <div className="orbit-sat" style={{ transform: 'rotate(90deg)' }}>
-                  <div className="orbit-content orbit-content-2">AI / ML</div>
+                  <div className="orbit-content orbit-content-2">Backend</div>
                 </div>
                 <div className="orbit-sat" style={{ transform: 'rotate(270deg)' }}>
                   <div className="orbit-content orbit-content-2">Full-Stack</div>
@@ -66,7 +66,7 @@ export default function About() {
                   <div className="orbit-content orbit-content-3">FastAPI</div>
                 </div>
                 <div className="orbit-sat" style={{ transform: 'rotate(225deg)' }}>
-                  <div className="orbit-content orbit-content-3">IoT Pipelines</div>
+                  <div className="orbit-content orbit-content-3">Data Structures</div>
                 </div>
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function About() {
                 not just functional, but impactful.
               </p>
               <p className="about-summary">
-                From developing ML-powered crop recommendation systems to building full-stack e-commerce platforms,
+                From developing smart crop recommendation systems to building full-stack e-commerce platforms,
                 I consistently challenge myself to explore new domains. I believe great software is born from
                 a deep understanding of the problem — and I bring that mindset to every project I tackle.
               </p>

@@ -2,40 +2,28 @@ import { ScrollReveal } from '../hooks/useScrollReveal'
 
 const EDUCATION = [
   {
-    level: 'Undergraduate',
     degree: 'BSc (Hons) Computer Science',
-    institution: 'Informatics Institute of Technology',
-    affiliation: 'Affiliated with University of Westminster, UK',
+    institution: 'University of Westminster – IIT Sri Lanka',
     period: '2024 – Present',
-    result: null,
     icon: '🎓',
-    highlight: true,
   },
   {
-    level: 'GCE Advanced Level',
-    degree: 'Physical Science — C2S',
-    institution: 'Hindu Ladies College',
-    affiliation: 'Colombo 06, Sri Lanka',
+    degree: 'G.C.E Advanced Level – Physical Science',
+    institution: 'Hindu Ladies’ College',
     period: '2021 – 2023',
-    result: 'Physical Science — C2S',
-    icon: '📘',
-    highlight: false,
+    icon: '🏫',
   },
   {
-    level: 'GCE Ordinary Level',
-    degree: 'Results: 5A 4B',
-    institution: 'Hindu Ladies College',
-    affiliation: 'Colombo 06, Sri Lanka',
+    degree: 'G.C.E Ordinary Level',
+    institution: 'Hindu Ladies’ College',
     period: '2019 – 2020',
-    result: '5A 4B',
-    icon: '📗',
-    highlight: false,
+    icon: '📖',
   },
 ]
 
 export default function Education() {
   return (
-    <section id="education" className="section">
+    <section id="education" className="section" style={{ background: 'rgba(0,0,0,0.05)' }}>
       <div className="container">
         <ScrollReveal>
           <div className="section-header">
@@ -46,29 +34,26 @@ export default function Education() {
           </div>
         </ScrollReveal>
 
-        <div className="edu-grid">
+        <div className="experience-timeline" style={{ maxWidth: '900px', margin: '0 auto' }}>
           {EDUCATION.map((edu, i) => (
             <ScrollReveal key={i} delay={i * 100}>
-              <div
-                className="edu-card"
-                style={edu.highlight ? { borderColor: 'var(--border-glow)', background: 'rgba(0,212,255,0.04)' } : {}}
-              >
-                <div style={{ fontSize: '2.5rem', marginBottom: '0.75rem' }}>{edu.icon}</div>
-                <div className="edu-level">{edu.level}</div>
-                <div className="edu-degree">{edu.degree}</div>
-                <div className="edu-institution">{edu.institution}</div>
-                <div style={{ fontSize: '0.78rem', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
-                  {edu.affiliation}
+              <div className="exp-item">
+                <div className="exp-dot" style={{ border: '2px solid var(--border-glow)', background: 'var(--bg-card)' }}>
+                  {edu.icon}
                 </div>
-                <div className="edu-period">{edu.period}</div>
-                {edu.result && (
-                  <div className="edu-result">{edu.result}</div>
-                )}
-                {edu.highlight && (
-                  <div className="edu-result" style={{ background: 'rgba(0,212,255,0.08)', borderColor: 'rgba(0,212,255,0.25)', color: 'var(--cyan)', marginTop: '0.75rem' }}>
-                    ● Currently Enrolled
+                <div className="exp-content" style={{ padding: '2rem' }}>
+                  <div className="exp-header" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '0.25rem' }}>
+                    <div className="exp-period" style={{ color: 'var(--purple)', fontWeight: 600, marginBottom: '0.5rem' }}>
+                      {edu.period}
+                    </div>
+                    <div className="exp-role" style={{ fontSize: '1.25rem', fontWeight: 800 }}>
+                      {edu.degree}
+                    </div>
                   </div>
-                )}
+                  <div className="exp-org" style={{ fontSize: '0.95rem', opacity: 0.8, marginTop: '0.4rem' }}>
+                    {edu.institution}
+                  </div>
+                </div>
               </div>
             </ScrollReveal>
           ))}
